@@ -1,0 +1,5 @@
+Through snipe, I'll be walking in parallel with the Auction Sniper worked example from Steve Freeman and Nat Pryce's book, Growing Object-Oriented Software, Guided by Tests. This example has some nice properties. It's larger than a kata and brings out a lot of TDD/BDD practice and emergent design. At the same time, many people are conversant in this example through reading the book, so it has something of the ubiquity of a kata. A number of smart people have shared their approaches on GitHub as well.
+
+I'll do it a bit differently and will likely experiment a lot along the way. I think it will be a web app, not a Swing app. I think it will be Ruby and JavaScript instead of Java (but not Rails either). RSpec. Jasmine. Maybe Cucumber. Maybe the whole spectrum of test double libraries.
+
+Finally, this is a deliberate icebreaker to get me in the habit of social coding on GitHub. Chime in!
