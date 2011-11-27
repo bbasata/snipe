@@ -2,10 +2,10 @@ require 'snipe/web'
 require 'snipe/xmpp'
 
 class Sniper
-  def start_bidding_in(auction)
+  def start_bidding_in(item_id)
     connect
     login
-    message "JOIN", auction_jid(auction)
+    message "JOIN", auction_jid(item_id)
     on_message { |m| receive_message(m) }
   end
 
@@ -21,10 +21,10 @@ class Sniper
 
   include Snipe::Xmpp::LogsInToAnXmppServer
 
-  def auction_jid(auction)
-    "auction-#{auction.item_id}@localhost"
+  def auction_jid(item_id)
+    "auction-#{item_id}@localhost"
   end
 
-  def jid; "sniper@localhost"; end
+  def jid; "snipe@localhost"; end
   def xmpp_password; "password"; end
 end
