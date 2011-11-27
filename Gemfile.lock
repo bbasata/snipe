@@ -3,6 +3,7 @@ GEM
   specs:
     addressable (2.2.6)
     archive-tar-minitar (0.5.2)
+    background_process (1.3)
     builder (3.0.0)
     capybara (1.1.1)
       mime-types (>= 1.16)
@@ -61,12 +62,17 @@ GEM
       ffi (>= 1.0.7)
       json_pure
       rubyzip
+    service_manager (0.6.2)
+      background_process (>= 1.2)
+      tcpsocket-wait
     sinatra (1.3.1)
       rack (~> 1.3, >= 1.3.4)
       rack-protection (~> 1.1, >= 1.1.2)
       tilt (~> 1.3, >= 1.3.3)
+    tcpsocket-wait (1.0.0)
     term-ansicolor (1.0.6)
     tilt (1.3.3)
+    xmpp4r (0.5)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -79,4 +85,6 @@ DEPENDENCIES
   launchy (~> 2.0.5)
   rspec (~> 2.7.0)
   ruby-debug19
+  service_manager (~> 0.6.2)
   sinatra (~> 1.3.1)
+  xmpp4r (= 0.5)
