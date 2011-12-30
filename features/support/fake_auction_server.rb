@@ -13,7 +13,7 @@ class Auction
 
   def receive_message(message)
     @bidder = message.from
-    message.body == 'JOIN' && @joined = true
+    @joined = true if message.body == 'JOIN'
   end
 
   def stop_selling_item

@@ -1,5 +1,6 @@
 require 'snipe/web'
 require 'snipe/xmpp'
+require 'xmpp4r'
 
 class Sniper
   def start_bidding_in(item_id)
@@ -10,7 +11,7 @@ class Sniper
   end
 
   def receive_message(message)
-    message.body == 'CLOSED' && @status = "Lost"
+    @status = "Lost" if message.body == 'CLOSED'
   end
 
   def status
@@ -25,6 +26,6 @@ class Sniper
     "auction-#{item_id}@localhost"
   end
 
-  def jid; "snipe@localhost"; end
+  def jid; Jabber::JID.new("snipe@localhost"); end
   def xmpp_password; "password"; end
 end
